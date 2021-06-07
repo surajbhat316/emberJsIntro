@@ -1,0 +1,24 @@
+{{yield}}
+<h2>{{@title}}</h2>
+
+<label for="use">Enter USN</label>
+<Input
+  @id="use"
+  @type="text"
+  @value={{this.usn}}/>
+
+  {{!-- <p>{{@usn}}</p> --}}
+
+{{!-- 
+  <button {{on "click" (this.checkUsn) }}>{{}}</button> --}}
+{{!-- <button {{on "submit" (this.validateUsn)}}>Send</button> --}}
+
+
+<button type="button" {{on 'click'  this.validateUsn}}> Check</button>  
+{{!-- {{#if(validateUsn){
+    <p>Valid</p>
+}}} --}}
+
+{{#if flag}}
+  <p>Valid Usn</p>
+{{/if }}
